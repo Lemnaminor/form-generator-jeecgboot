@@ -32,7 +32,7 @@ import Parser from '@/components/formGenerator/components/parser/Parser'
 />
 ```
 
-备注：
+#### 项目说明：
 
 1，本项目在form-generator的基础上进行二次开发，添加了文本、分隔符、用户组件、部门组件等4个组件。
 

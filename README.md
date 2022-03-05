@@ -33,7 +33,7 @@ import Parser from '@/components/formGenerator/components/parser/Parser'
 ```
 
 #### 项目说明：
-1,本项目因结合公司流程图业务使用，注释了form-generator运行、预览json、导出代码等功能。
+1，本项目因结合公司流程图业务使用，注释了form-generator运行、预览json、导出代码等功能。
 
 2，本项目在form-generator的基础上进行二次开发，添加了文本、分隔符、用户组件、部门组件等4个组件。
 

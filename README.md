@@ -15,10 +15,9 @@ import formGenerator from '@/components/formGenerator/views/index/Home.vue'
 ```
 ```html
 <form-generator
-  ref="formGenerator"
-  @onClose="visibleGen = false"
-  @onSave="onSaveFinish"
-  :formJson="formJson_1"
+  :formJson="formJson"
+  @onClose="onClose"
+  @onSave="onSave"
 />
 ```
 表单解析器组件调用示例：
@@ -28,7 +27,7 @@ import Parser from '@/components/formGenerator/components/parser/Parser'
 ```html
 <parser
   :form-conf="formJson"
-  @submit="onSubmit"
+  @submit="submit"
 />
 ```
 

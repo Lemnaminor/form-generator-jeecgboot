@@ -266,7 +266,7 @@ export const inputComponents = [
       label: '评分',
       tag: 'el-rate',
       tagIcon: 'rate',
-      defaultValue: 0,
+      defaultValue: 1,
       span: 24,
       showLabel: true,
       labelWidth: null,
@@ -550,29 +550,29 @@ export const layoutComponents = [
     justify: 'start',
     align: 'top'
   },
-  {
-    __config__: {
-      label: '按钮',
-      showLabel: true,
-      changeTag: true,
-      labelWidth: null,
-      tag: 'el-button',
-      tagIcon: 'button',
-      span: 24,
-      layout: 'colFormItem',
-      document: 'https://element.eleme.cn/#/zh-CN/component/button'
-    },
-    __slot__: {
-      default: '主要按钮'
-    },
-    type: 'primary',
-    icon: 'el-icon-search',
-    round: false,
-    size: 'medium',
-    plain: false,
-    circle: false,
-    disabled: false
-  },
+  // {
+  //   __config__: {
+  //     label: '按钮',
+  //     showLabel: true,
+  //     changeTag: true,
+  //     labelWidth: null,
+  //     tag: 'el-button',
+  //     tagIcon: 'button',
+  //     span: 24,
+  //     layout: 'colFormItem',
+  //     document: 'https://element.eleme.cn/#/zh-CN/component/button'
+  //   },
+  //   __slot__: {
+  //     default: '主要按钮'
+  //   },
+  //   type: 'primary',
+  //   icon: 'el-icon-search',
+  //   round: false,
+  //   size: 'medium',
+  //   plain: false,
+  //   circle: false,
+  //   disabled: false
+  // },
   // {
   //   __config__: {
   //     layout: 'colFormItem',

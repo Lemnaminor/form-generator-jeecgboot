@@ -82,14 +82,14 @@ export default {
     // 添加业务提交
     async setAddForm(form) {
       console.log('form-2:', form);
+      const { formJson, ...args } = form;
       // 处理隐藏字段undefined赋值空
-      for(let key in form){
+      for(let key in args){
         if(form[key] == undefined) form[key] = ''
       }
-      const { formJson, ...args } = form;
       // 循环处理用户选择/部门选择组件数据id
       for(let key in args){
-        if(args[key].includes('_*_')) {
+        if((args[key] && typeof(args[key]) === 'string') && args[key].includes('_*_')) {
           let tData = args[key].split('_*_');
           args[key] = tData[0]
           args[`${key}Id`] = tData[1]

@@ -1,7 +1,7 @@
 # form-generator-jeecgboot
 
 #### 项目描述
-基于vue2.x、elementUI、form-generator 仿jeecg-boot的表单设计器。
+基于vue2.x、elementUI、form-generator 仿jeecg-boot的表单设计器、解析器。
 
 运行示例地址：[https://lemnaminor.github.io/form-generator-jeecgboot/dist](https://lemnaminor.github.io/form-generator-jeecgboot/dist "https://lemnaminor.github.io/form-generator-jeecgboot/dist")
 
@@ -21,7 +21,7 @@ import formGenerator from '@/components/formGenerator/views/index/Home.vue'
   :formJson="formJson_1"
 />
 ```
-表单解释器组件调用示例：
+表单解析器组件调用示例：
 ```js
 import Parser from '@/components/formGenerator/components/parser/Parser'
 ```
@@ -37,9 +37,9 @@ import Parser from '@/components/formGenerator/components/parser/Parser'
 
 2，本项目在form-generator的基础上进行二次开发，添加了文本、分隔符、用户组件、部门组件等4个组件。
 
-3，因业务需求扩展了parser解释器组件，表单保存传参时把对应字段属性递归绑定到了表单json属性字段里面。用户组件、部门组件默认添加了`'${属性名}Id'`字段以方便后端查询使用。
+3，因业务需求扩展了parser解析器组件，表单保存传参时把对应字段属性递归绑定到了表单json属性字段里面。用户组件、部门组件默认添加了`'${属性名}Id'`字段以方便后端查询使用。
 
-4，因业务需求对单行文本组件、用户组件、部门组件等3个组件添加了'隐藏字段'属性面板。勾选后解释器不显示对应组件。
+4，因业务需求对单行文本组件、用户组件、部门组件等3个组件添加了'隐藏字段'属性面板。勾选后解析器不显示对应组件。
 
 5，修改了行容器布局样式使表单接近表格形式，结合文本组件使用更佳。不使用行容器布局则是正常element表单形式。如下图：
 

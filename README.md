@@ -48,11 +48,6 @@ import Parser from '@/components/formGenerator/components/parser/Parser'
 ![节点](./src/assets/demo03.png)
 
 
-#### 参考链接（感谢）：
-form-generator: [https://github.com/JakHuang/form-generator](https://github.com/JakHuang/form-generator "https://github.com/JakHuang/form-generator")
-
-element-ui: [https://element.eleme.cn//#/zh-CN/component/installation](https://element.eleme.cn//#/zh-CN/component/installation "https://element.eleme.cn//#/zh-CN/component/installation")
-
 #### 引入项目说明：
 
 ##### 项目文件夹：/src/components/formGenerator
@@ -139,6 +134,11 @@ npm run serve
 ```
 npm run build
 ```
+
+#### 参考链接（感谢）：
+form-generator: [https://github.com/JakHuang/form-generator](https://github.com/JakHuang/form-generator "https://github.com/JakHuang/form-generator")
+
+element-ui: [https://element.eleme.cn//#/zh-CN/component/installation](https://element.eleme.cn//#/zh-CN/component/installation "https://element.eleme.cn//#/zh-CN/component/installation")
 
 ### 其他说明：
 1，如此项目对你有所帮助我很开心，请点一下star以帮助到更多的人。

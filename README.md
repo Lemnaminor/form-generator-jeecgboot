@@ -1,5 +1,10 @@
 # form-generator-jeecgboot
 
+发布日期：2022-03-06
+
+[![GitHub stars](https://img.shields.io/github/stars/Lemnaminor/form-generator-jeecgboot.svg?style=social&label=Stars)](https://github.com/Lemnaminor/form-generator-jeecgboot)
+&emsp;[![GitHub stars](https://gitee.com/liangheng1028/form-generator-jeecgboot/badge/star.svg?theme=dark)](https://gitee.com/liangheng1028/form-generator-jeecgboot)
+
 #### 项目描述：
 基于vue2.x、elementUI、form-generator 仿jeecg-boot的表单设计器、解析器。
 

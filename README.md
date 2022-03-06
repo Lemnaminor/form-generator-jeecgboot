@@ -1,6 +1,6 @@
 # form-generator-jeecgboot
 
-#### 项目描述
+#### 项目描述：
 基于vue2.x、elementUI、form-generator 仿jeecg-boot的表单设计器、解析器。
 
 运行示例地址：[https://lemnaminor.github.io/form-generator-jeecgboot/dist](https://lemnaminor.github.io/form-generator-jeecgboot/dist "https://lemnaminor.github.io/form-generator-jeecgboot/dist")
@@ -9,6 +9,7 @@
 
 ![节点](./src/assets/demo01.png)
 
+#### 组件调用示例：
 表单设计器组件组件调用示例：
 ```js
 import formGenerator from '@/components/formGenerator/views/index/Home.vue'
@@ -52,7 +53,7 @@ form-generator: [https://github.com/JakHuang/form-generator](https://github.com/
 
 element-ui: [https://element.eleme.cn//#/zh-CN/component/installation](https://element.eleme.cn//#/zh-CN/component/installation "https://element.eleme.cn//#/zh-CN/component/installation")
 
-#### 引入项目说明
+#### 引入项目说明：
 
 ##### 项目文件夹：/src/components/formGenerator
 
@@ -125,7 +126,7 @@ Vue.component('JSelectDept', JSelectDept)
 Vue.component('JSelectUser', JSelectUser)
 ```
 
-#### 项目运行
+#### 项目运行：
 1，项目下载依赖
 ```
 npm install 或者 cnpm install
@@ -139,7 +140,7 @@ npm run serve
 npm run build
 ```
 
-### 其他说明
+### 其他说明：
 1，如此项目对你有所帮助我很开心，请点一下star以帮助到更多的人。
 
 2，如项目有问题请提issue，或者联系我本人QQ：291294950。

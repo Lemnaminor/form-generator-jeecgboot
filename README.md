@@ -146,6 +146,6 @@ form-generator: [https://github.com/JakHuang/form-generator](https://github.com/
 element-ui: [https://element.eleme.cn//#/zh-CN/component/installation](https://element.eleme.cn//#/zh-CN/component/installation "https://element.eleme.cn//#/zh-CN/component/installation")
 
 ### 其他说明：
-1，如此项目对你有所帮助我很开心，请点一下star以帮助到更多的人。
+1，如此项目对你有所帮助很开心，请点一下star以帮助到更多的人。
 
 2，如项目有问题请提issue，或者联系我本人QQ：291294950。

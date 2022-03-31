@@ -73,7 +73,7 @@ function buildDataObject(confClone, dataObject) {
 function clearAttrs(dataObject) {
   delete dataObject.attrs.__config__
   delete dataObject.attrs.__slot__
-  delete dataObject.attrs.__methods__
+  // delete dataObject.attrs.__methods__
 }
 
 function makeDataObject() {

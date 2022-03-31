@@ -104,6 +104,11 @@ export default {
       this.visibleParser = false;
       this.formJson= formJson;
     },
+
+    ccc(){
+      alert('ccc')
+      
+    }
   },
 }
 </script>

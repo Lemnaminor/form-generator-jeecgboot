@@ -31,7 +31,11 @@
               </el-option-group>
             </el-select>
           </el-form-item> -->
-          <el-form-item v-if="activeData.__vModel__!==undefined && activeData.__config__.tag !== 'j-text' && activeData.__config__.tag !== 'el-divider'" label="字段名">
+          <el-form-item v-if="activeData.__vModel__!==undefined 
+          && activeData.__config__.tag !== 'j-text' 
+          && activeData.__config__.tag !== 'el-divider' 
+          && activeData.__config__.tag !== 'el-button'" 
+          label="字段名">
             <el-input v-model="activeData.__vModel__" placeholder="请输入字段名（v-model）" />
           </el-form-item>
           <el-form-item v-if="activeData.__config__.componentName!==undefined" label="组件名">
@@ -86,6 +90,7 @@
           </el-form-item>
           <el-form-item v-if="activeData.__vModel__!==undefined
             && activeData.__config__.tag !== 'el-divider'
+            && activeData.__config__.tag !== 'el-button'
             && activeData.__config__.tag !== 'j-select-user'
             && activeData.__config__.tag !== 'j-select-dept'" label="默认值"
           >
@@ -289,6 +294,12 @@
             label="按钮文字"
           >
             <el-input v-model="activeData.__slot__.default" placeholder="请输入按钮文字" />
+          </el-form-item>
+          <el-form-item
+            v-if="activeData.__config__.tag === 'el-button'"
+            label="动态函数"
+          >
+            <el-input v-model="activeData.dynamicFun" placeholder="请输入动态函数" @blur="inputSetDynamicFun" />
           </el-form-item>
           <el-form-item v-if="activeData['range-separator'] !== undefined" label="分隔符">
             <el-input v-model="activeData['range-separator']" placeholder="请输入分隔符" />
@@ -932,6 +943,8 @@ export default {
   watch: {
     formConf: {
       handler(val) {
+        console.log('val:', val)
+        val['__methods__'] = {};
         saveFormConf(val)
       },
       deep: true
@@ -1080,7 +1093,24 @@ export default {
       if (needRerenderList.includes(this.activeData.__config__.tag)) {
         this.activeData.__config__.renderKey = +new Date()
       }
-    }
+    },
+    inputSetDynamicFun(){
+      const { dynamicFun } = this.activeData;
+      if(!dynamicFun) {
+        delete this.activeData.on;
+        // delete this.formConf['__methods__'][dynamicFun];
+      }
+      if(dynamicFun) {
+        this.activeData['on'] = {
+          click: dynamicFun,
+        }
+        // this.formConf['__methods__'][dynamicFun] = `()=>{this.$parent[${dynamicFun}]()}`
+        // this.formConf['__methods__'][dynamicFun] = () => { eval(`this.$parent[${dynamicFun}]()`) }
+        this.formConf['__methods__'][dynamicFun] = ()=>{this[`${dynamicFun}`]()}
+      }
+      console.log('aData:', this.formConf)
+    },
+
   }
 }
 </script>

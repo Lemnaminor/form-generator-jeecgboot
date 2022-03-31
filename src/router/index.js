@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Detail from '../views/Detail.vue'
 import Detail2 from '../views/Detail2.vue'
 import Detail3 from '../views/Detail3.vue'
+import Detail4 from '../views/Detail4.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/Detail3',
     name: 'Detail3',
     component: Detail3
+  },
+  {
+    path: '/Detail4',
+    name: 'Detail4',
+    component: Detail4
   }
 ]
 

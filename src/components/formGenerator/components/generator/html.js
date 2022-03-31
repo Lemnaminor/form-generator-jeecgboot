@@ -174,7 +174,7 @@ const tags = {
     let child = buildElButtonChild(el)
 
     if (child) child = `\n${child}\n` // 换行
-    return `<${tag} ${type} ${icon} ${round} ${size} ${plain} ${disabled} ${circle}>${child}</${tag}>`
+    return `<${tag} ${type} ${icon} ${round} ${size} ${plain} ${disabled} ${circle} @click="ccc()">${child}</${tag}>`
   },
   'el-input': el => {
     const {

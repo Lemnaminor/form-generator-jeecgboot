@@ -9,7 +9,7 @@ export const formConf = {
   gutter: 15,
   disabled: false,
   span: 24,
-  formBtns: true
+  formBtns: true,
 }
 
 // 输入型组件 【左面板】
@@ -328,8 +328,30 @@ export const inputComponents = [
     step: 1,
     'show-stops': false,
     range: false
-  }
-
+  },
+  {
+    __config__: {
+      label: '按钮',
+      showLabel: true,
+      changeTag: true,
+      labelWidth: null,
+      tag: 'el-button',
+      tagIcon: 'button',
+      span: 24,
+      layout: 'colFormItem',
+      document: 'https://element.eleme.cn/#/zh-CN/component/button',
+    },
+    __slot__: {
+      default: '主要按钮'
+    },
+    type: 'primary',
+    icon: 'el-icon-search',
+    round: false,
+    size: 'medium',
+    plain: false,
+    circle: false,
+    disabled: false,
+  },
   // {
   //   __config__: {
   //     label: '密码',
@@ -550,29 +572,6 @@ export const layoutComponents = [
     justify: 'start',
     align: 'top'
   },
-  // {
-  //   __config__: {
-  //     label: '按钮',
-  //     showLabel: true,
-  //     changeTag: true,
-  //     labelWidth: null,
-  //     tag: 'el-button',
-  //     tagIcon: 'button',
-  //     span: 24,
-  //     layout: 'colFormItem',
-  //     document: 'https://element.eleme.cn/#/zh-CN/component/button'
-  //   },
-  //   __slot__: {
-  //     default: '主要按钮'
-  //   },
-  //   type: 'primary',
-  //   icon: 'el-icon-search',
-  //   round: false,
-  //   size: 'medium',
-  //   plain: false,
-  //   circle: false,
-  //   disabled: false
-  // },
   // {
   //   __config__: {
   //     layout: 'colFormItem',

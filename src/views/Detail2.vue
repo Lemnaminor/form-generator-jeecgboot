@@ -1,7 +1,8 @@
 <template>
   <div class="test-form">
     <parser :form-conf="formConf" @submit="sumbitForm1" />
-    <parser :key="key2" :form-conf="formConf" @submit="sumbitForm2" />
+    <!-- <parser :form-conf="formConf" @submit="sumbitForm1" /> -->
+    <!-- <parser :key="key2" :form-conf="formConf" @submit="sumbitForm2" /> -->
     <el-button @click="change">
       change
     </el-button>
@@ -150,7 +151,7 @@ export default {
               renderKey: 1594288459289
             },
             __slot__: {
-              default: '测试按钮1'
+              default: '测试按钮111'
             },
             type: 'primary',
             icon: 'el-icon-search',
@@ -162,9 +163,39 @@ export default {
             on: {
               click: 'clickTestButton1'
             }
+          },
+          {
+            __config__: {
+              label: '按钮',
+              showLabel: true,
+              changeTag: true,
+              labelWidth: null,
+              tag: 'el-button',
+              tagIcon: 'button',
+              span: 24,
+              layout: 'colFormItem',
+              document: 'https://element.eleme.cn/#/zh-CN/component/button',
+              renderKey: 1594288459289
+            },
+            __slot__: {
+              default: '测试按钮22222'
+            },
+            type: 'primary',
+            icon: 'el-icon-search',
+            round: false,
+            size: 'medium',
+            plain: false,
+            circle: false,
+            disabled: false,
+            on: {
+              click: 'bbb'
+            }
           }
         ],
         __methods__: {
+          bbb: eval(`function(){
+            this.$parent['bbb']();
+          }`),
           clickTestButton1() {
             console.log(
               `%c【测试按钮1】点击事件里可以访问当前表单：
@@ -175,6 +206,21 @@ export default {
             )
             console.log('表单的Model：', this.formData)
             console.log('表单的ref：', this.$refs.elForm)
+            // this.$emit('eventBtn')
+            this.$parent['aaa']();
+          },
+          clickTestButton2() {
+            console.log(
+              `%c【测试按钮1】点击事件里可以访问当前表单：
+                1) formModel='formData', 所以this.formData可以拿到当前表单的model
+                2) formRef='elForm', 所以this.$refs.elForm可以拿到当前表单的ref(vue组件)
+              `,
+              'color:#409EFF;font-size: 15px'
+            )
+            console.log('表单的Model：', this.formData)
+            console.log('表单的ref：', this.$refs.elForm)
+            // this.$emit('eventBtn')
+            this.$parent['bbb']();
           }
         },
         formRef: 'elForm',
@@ -310,7 +356,13 @@ export default {
     },
     sumbitForm2(data) {
       console.log('sumbitForm2提交数据：', data)
-    }
+    },
+    aaa(){
+      alert('aaa')
+    },
+    bbb(){
+      alert('bbb')
+    },
   }
 }
 </script>

@@ -8,6 +8,7 @@
       :form-conf="formConf"
       @submit="onSubmit"
       @change="onChange"
+      @ccc="ccc"
     />
   </div>
 </template>
@@ -39,11 +40,8 @@ export default {
         formBtns: true,
         __methods__: {
           aaa() {
-            this.$parent.aaa()
+            this.$parent['aaa']()
           },
-          bbb() {
-            this.$parent.bbb()
-          }
         },
         fields: [
           {
@@ -228,7 +226,7 @@ export default {
             plain: false,
             circle: false,
             disabled: false,
-            __vModel__: 'field101',
+            __vModel__: '',
             dynamicFun: 'aaa',
             on: {
               click: 'aaa',
@@ -258,10 +256,38 @@ export default {
             plain: false,
             circle: false,
             disabled: false,
-            __vModel__: 'field102',
             dynamicFun: 'bbb',
             on: {
               click: 'bbb',
+            },
+          },,
+          {
+            __config__: {
+              label: '按钮',
+              showLabel: true,
+              changeTag: true,
+              labelWidth: null,
+              tag: 'el-button',
+              tagIcon: 'button',
+              span: 24,
+              layout: 'colFormItem',
+              document: 'https://element.eleme.cn/#/zh-CN/component/button',
+              formId: 102,
+              renderKey: '1021648740766205',
+            },
+            __slot__: {
+              default: '按钮ccc调用',
+            },
+            type: 'primary',
+            icon: 'el-icon-search',
+            round: false,
+            size: 'medium',
+            plain: false,
+            circle: false,
+            disabled: false,
+            dynamicFun: 'ccc',
+            on: {
+              click: 'ccc',
             },
           },
         ],
@@ -274,6 +300,7 @@ export default {
 
   },
   mounted() {
+    console.log('ruleForm:', this.$refs.ruleForm)
     // 表单数据回填，模拟异步请求场景
     // setTimeout(() => {
     //   // 请求回来的表单数据
@@ -335,12 +362,43 @@ export default {
       console.log('onSubmit:', formData)
     },
     // 动态函数方法
-    aaa() {
+    // aaa() {
+    //   setTimeout(() => {
+    //     // 请求回来的表单数据
+    //     const data = {
+    //       // ...this.$refs.ruleForm.formData,
+    //       name: '李四1',
+    //     }
+    //     console.log('okk', data)
+    //     // 回填数据
+    //     this.fillFormData(this.formConf, data)
+    //     // 更新表单
+    //     this.key2 = +new Date()
+    //   }, 1000)
+    // },
+    // bbb() {
+    //   setTimeout(() => {
+    //     // 请求回来的表单数据
+    //     const data = {
+    //       name: '王五',
+    //     }
+    //     console.log('okk', data)
+    //     // 回填数据
+    //     this.fillFormData(this.formConf, data)
+    //     // 更新表单
+    //     this.key2 = +new Date()
+    //   }, 1000)
+    // },
+    aaa(){
       alert('aaa')
     },
-    bbb() {
+    bbb(){
       alert('bbb')
-    }
+    },
+    ccc(){
+      alert('ccc')
+    },
+
   },
 }
 </script>

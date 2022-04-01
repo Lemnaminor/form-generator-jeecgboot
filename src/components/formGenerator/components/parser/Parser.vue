@@ -97,7 +97,7 @@ function renderChildren(h, scheme) {
 }
 
 function setValue(event, config, scheme) {
-  console.log('event:', event, 'config:', config, 'scheme:', scheme)
+  // console.log('event:', event, 'config:', config, 'scheme:', scheme)
   this.$set(config, 'defaultValue', event)
   this.$set(this[this.formConf.formModel], scheme.__vModel__, event)
   this.$emit('change', this[this.formConf.formModel], scheme.__config__.defaultValue, scheme.__vModel__)
@@ -179,7 +179,6 @@ export default {
         if (!valid) return false
         // 触发sumit事件
         this[this.formConf.formModel]['formJson'] = this.formConf;
-        console.log('form:', this[this.formConf.formModel])
         this.$emit('submit', this[this.formConf.formModel])
         return true
       })

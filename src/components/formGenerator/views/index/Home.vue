@@ -399,7 +399,8 @@ export default {
       config.formId = ++this.idGlobal
       config.renderKey = `${config.formId}${+new Date()}` // 改变renderKey后可以实现强制更新组件
       if (config.layout === 'colFormItem') {
-        if (config.tag === 'el-divider' || config.tag === 'j-text') {
+        // 设置组件__vModel__值为空
+        if (config.tag === 'el-divider' || config.tag === 'el-button' || config.tag === 'j-text') {
           item.__vModel__ = ''
         } else {
           item.__vModel__ = `field${this.idGlobal}`

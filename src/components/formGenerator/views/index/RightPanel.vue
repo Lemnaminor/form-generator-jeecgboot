@@ -943,8 +943,6 @@ export default {
   watch: {
     formConf: {
       handler(val) {
-        console.log('val:', val)
-        val['__methods__'] = {};
         saveFormConf(val)
       },
       deep: true
@@ -1098,17 +1096,12 @@ export default {
       const { dynamicFun } = this.activeData;
       if(!dynamicFun) {
         delete this.activeData.on;
-        // delete this.formConf['__methods__'][dynamicFun];
       }
       if(dynamicFun) {
         this.activeData['on'] = {
           click: dynamicFun,
         }
-        // this.formConf['__methods__'][dynamicFun] = `()=>{this.$parent[${dynamicFun}]()}`
-        // this.formConf['__methods__'][dynamicFun] = () => { eval(`this.$parent[${dynamicFun}]()`) }
-        this.formConf['__methods__'][dynamicFun] = ()=>{this[`${dynamicFun}`]()}
       }
-      console.log('aData:', this.formConf)
     },
 
   }

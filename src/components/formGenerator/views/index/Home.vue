@@ -378,7 +378,13 @@ export default {
       }
     },
     addComponent(item) {
+      console.log('ok1')
+      const { tag, defaultValue } = item.__config__;
+      if(tag === 'j-form') {
+        this.$emit('eventForm', defaultValue);
+      }
       const clone = this.cloneComponent(item)
+      console.log('clone:', clone)
       this.fetchData(clone)
       this.drawingList.push(clone)
       this.activeFormItem(clone)

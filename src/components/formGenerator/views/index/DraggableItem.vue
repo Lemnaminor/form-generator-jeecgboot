@@ -88,7 +88,7 @@ function renderChildren(h, currentItem, index, list) {
     if (layout) {
       return layout.call(this, h, el, i, config.children)
     }
-    return layoutIsNotFound.call(this)
+    // return layoutIsNotFound.call(this)
   })
 }
 
@@ -114,7 +114,7 @@ export default {
     if (layout) {
       return layout.call(this, h, this.currentItem, this.index, this.drawingList)
     }
-    return layoutIsNotFound.call(this)
+    // return layoutIsNotFound.call(this)
   }
 }
 </script>

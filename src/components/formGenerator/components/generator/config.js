@@ -1,3 +1,5 @@
+import {userForm, testForm} from '@/components/formGenerator/components/generator/customFormData'
+
 // 表单属性【右面板】
 export const formConf = {
   formRef: 'elForm',
@@ -351,6 +353,18 @@ export const inputComponents = [
     plain: false,
     circle: false,
     disabled: false,
+  },
+  {
+    __config__: {
+      label: '内置表单',
+      showLabel: true,
+      changeTag: true,
+      labelWidth: null,
+      tag: 'j-form',
+      tagIcon: 'form',
+      defaultValue: userForm,
+      span: 24,
+    },
   },
   // {
   //   __config__: {
